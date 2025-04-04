@@ -30,7 +30,7 @@ class DateTimePickerWidget extends StatefulWidget {
   }) : super(key: key) {
     DateTime minTime = minDateTime ?? DateTime.parse(DATE_PICKER_MIN_DATETIME);
     DateTime maxTime = maxDateTime ?? DateTime.parse(DATE_PICKER_MAX_DATETIME);
-    assert(minTime.compareTo(maxTime) < 0);
+    assert(minTime.compareTo(maxTime) <= 0);
   }
 
   final DateTime minDateTime, maxDateTime, initDateTime;
